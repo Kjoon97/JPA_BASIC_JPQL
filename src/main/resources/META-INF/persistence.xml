@@ -17,6 +17,7 @@
             <property name="hibernate.use_sql_comments" value="true"/>    <!-- sql 쿼리날릴 때 콘솔창 주석 -->
             <property name="hibernate.jdbc.batch_size" value="10"/>       <!-- sql 쿼리날릴 때 단위 사이즈, vlaue만큼 한꺼번에 모아서 db에 쿼리 날림.(버퍼링 기능) -->
             <property name="hibernate.hbm2ddl.auto" value="create"  />
+            <property name="hibernate.default_batch_fetch_size" value="1000"  />  <!--배치 사이즈 설정하면 쿼리가 n+1이 아니라 딱 테이블 수만큼 맞출 수 있다.-->
         </properties>
     </persistence-unit>
 </persistence>
